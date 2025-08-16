@@ -1,20 +1,21 @@
 # Etapa de compilación
 FROM node:20-alpine AS builder
-WORKDIR /app
+WORKDIR /api
 
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 COPY . .
 RUN npm run build
 
 # Etapa de producción
 FROM node:20-alpine AS production
-WORKDIR /app
+WORKDIR /api
 
 COPY package*.json ./
-RUN npm install --only=production
+RUN npm ci --only=production
 
-COPY --from=builder /app/dist ./dist
+COPY --from=builder /api/dist ./dist
 
-CMD ["node", "dist/main"]
+EXPOSE 3000
+CMD ["node", "dist/main.js"]
