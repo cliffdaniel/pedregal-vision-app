@@ -14,13 +14,13 @@ type Story = StoryObj<typeof SidebarHeader>;
 
 export const WithTitle: Story = {
     args: {
-        title: 'PE - CencoPayroll',
+        title: 'Pedregal Visión',
     },
 };
 
 export const WithLogo: Story = {
     args: {
-        title: 'PE - CencoPayroll',
+        title: 'Pedregal Visión',
         logo: <Shield className="h-6 w-6 text-primary" />,
     },
 };

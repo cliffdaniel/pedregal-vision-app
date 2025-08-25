@@ -23,7 +23,7 @@ export const Sidebar = ({ className, groups, footerItems = [], profile }: Sideba
         >
             <div className="flex items-center gap-2 px-4 py-4 min-w-0">
                 <SidebarToggle collapsed={collapsed} onToggle={setCollapsed} />
-                <SidebarHeader title={collapsed ? '' : 'PE - CencoPayroll'} />
+                <SidebarHeader title={collapsed ? '' : 'Pedregal Visión'} />
             </div>
 
             {!collapsed && (

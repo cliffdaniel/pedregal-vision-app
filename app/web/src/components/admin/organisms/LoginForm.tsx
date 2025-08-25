@@ -5,8 +5,6 @@ import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { loginSchema, LoginSchema } from '@/schemas/loginSchema';
-// import { loginAction } from '@/app/login/actions/login.action';
-import { FormFooter } from '@/components/admin/molecules/FormFooter';
 import { FormContainer } from '@/components/admin/atoms/FormContainer';
 import { AuthNotice } from '@/components/admin/atoms/AuthNotice';
 import { EmailInput } from '@/components/admin/atoms/EmailInput';
@@ -83,12 +81,6 @@ export const LoginForm = () => {
             <Button type="submit" className="w-full" disabled={isSubmitting}>
                 Iniciar Sesión
             </Button>
-
-            <FormFooter align="center">
-                <p className="text-sm text-muted-foreground">
-                    Inicia sesión con tu correo y contraseña corporativa.
-                </p>
-            </FormFooter>
         </FormContainer>
     );
 };
